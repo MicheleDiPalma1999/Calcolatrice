@@ -11,7 +11,6 @@ public class calcolatrice extends javax.swing.JFrame {
         initComponents();
     }
 
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -317,10 +316,10 @@ public class calcolatrice extends javax.swing.JFrame {
                     jTextPane1.setText(String.format("%s", (sottrazione(v))));
                     break;
                 case "/":
-                    jTextPane1.setText(String.format("%s", (Operando1 / Operando2)));
+                    jTextPane1.setText(String.format("%s", (divisione(v))));
                     break;
                 case "*":
-                    jTextPane1.setText(String.format("%s", (Operando1 * Operando2)));
+                    jTextPane1.setText(String.format("%s", (moltiplicazione(v))));
                     break;
 
             }
@@ -332,6 +331,22 @@ public class calcolatrice extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private int divisione(int[] v) {
+        int div = v[0];
+        for (int i = 1; i < v.length; i++) {
+            div /= v[i];
+        }
+        return div;
+    }
+
+    private int moltiplicazione(int[] v) {
+        int molt = v[0];
+        for (int i = 1; i < v.length; i++) {
+            molt *= v[i];
+        }
+        return molt;
+    }
 
     private int somma(int[] v) {
         int somma = 0;
@@ -363,7 +378,7 @@ public class calcolatrice extends javax.swing.JFrame {
             jTextPane1.setText("0");
         }
         jTextField1.setText(jTextField1.getText() + "0");
-
+        controllo = true;
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
@@ -372,7 +387,7 @@ public class calcolatrice extends javax.swing.JFrame {
         Operando1 = 0;
         Operando2 = 0;
         Operazione = "";
-        controllo = false;
+        controllo = true;
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
@@ -382,7 +397,7 @@ public class calcolatrice extends javax.swing.JFrame {
             jTextPane1.setText("9");
         }
         jTextField1.setText(jTextField1.getText() + "9");
-
+        controllo = true;
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
@@ -392,7 +407,7 @@ public class calcolatrice extends javax.swing.JFrame {
             jTextPane1.setText("8");
         }
         jTextField1.setText(jTextField1.getText() + "8");
-
+        controllo = true;
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
@@ -402,7 +417,7 @@ public class calcolatrice extends javax.swing.JFrame {
             jTextPane1.setText("7");
         }
         jTextField1.setText(jTextField1.getText() + "7");
-
+        controllo = true;
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
@@ -412,7 +427,7 @@ public class calcolatrice extends javax.swing.JFrame {
             jTextPane1.setText("6");
         }
         jTextField1.setText(jTextField1.getText() + "6");
-
+        controllo = true;
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -422,7 +437,7 @@ public class calcolatrice extends javax.swing.JFrame {
             jTextPane1.setText("5");
         }
         jTextField1.setText(jTextField1.getText() + "5");
-
+        controllo = true;
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -432,7 +447,7 @@ public class calcolatrice extends javax.swing.JFrame {
             jTextPane1.setText("4");
         }
         jTextField1.setText(jTextField1.getText() + "4");
-
+        controllo = true;
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -442,7 +457,7 @@ public class calcolatrice extends javax.swing.JFrame {
             jTextPane1.setText("2");
         }
         jTextField1.setText(jTextField1.getText() + "2");
-
+        controllo = true;
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -452,6 +467,7 @@ public class calcolatrice extends javax.swing.JFrame {
             jTextPane1.setText("1");
         }
         jTextField1.setText(jTextField1.getText() + "1");
+        controllo = true;
 
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -462,6 +478,7 @@ public class calcolatrice extends javax.swing.JFrame {
             jTextPane1.setText("3");
         }
         jTextField1.setText(jTextField1.getText() + "3");
+        controllo = true;
     }//GEN-LAST:event_jButton8ActionPerformed
 
     public static void main(String args[]) {
