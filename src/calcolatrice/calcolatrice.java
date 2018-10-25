@@ -299,7 +299,7 @@ public class calcolatrice extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
-        if (!"".equals(jTextField1.getText())) {
+        if (!"".equals(jTextField1.getText()) || "".equals(Operazione)) {
             String[] s = jTextPane1.getText().split("[+-/*]");
             int[] v = new int[s.length];
             int i = 0;
@@ -325,6 +325,7 @@ public class calcolatrice extends javax.swing.JFrame {
 
             }
             jTextField1.setText("");
+            Operazione = "";
             Operando1 = Double.parseDouble(jTextPane1.getText());
             controllo = false;
         }
